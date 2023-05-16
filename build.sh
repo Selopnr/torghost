@@ -5,7 +5,7 @@ echo "Installing dependencies "
 sudo pip3 install -r requirements.txt 
 mkdir build
 cd build
-cython3 ../torghost.py --embed -o torghost.c --verbose
+python3 ../torghost.py --embed -o torghost.c --verbose
 if [ $? -eq 0 ]; then
     echo [SUCCESS] Generated C code
 else
@@ -26,4 +26,5 @@ else
     echo [ERROR] Unable to copy
     ecit 1
 fi
+
 
